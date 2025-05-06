@@ -10,9 +10,6 @@ GET_NUMBER_BUTTON.onclick = function(){
     conditional_number = document.getElementById("text_box3").value;
     conditional_number = Number(conditional_number);
 
-    if(conditional_number == 1){
-        GET_p5.textContent = ("This is the number 1");
-    }
     if((conditional_number % 10) == 0){
         GET_p5.textContent = ("This number is divisible by 10");
         if((conditional_number % 5) == 0){
@@ -30,6 +27,12 @@ GET_NUMBER_BUTTON.onclick = function(){
         GET_p5.textContent = ("This number is divisible by 2");
     } else {
         GET_p5.textContent = ("This number is NOT divisible by 10, 5 or 2");
+    }
+
+    if(conditional_number == 1){
+        GET_p5.textContent = ("This is the number 1");
+    } else if (conditional_number == 0){
+        GET_p5.textContent = ("This is the number 0")
     }
 }
 
@@ -65,3 +68,23 @@ EDUCATIONAL_BUTTON.onclick = function(){
     }
 }
 
+// Ternary Operator (basically the same thing as an if / else statetment, but It's more condensed and easier to read)
+
+let time = 12;
+let message = time <= 10 ? "Good Morning" : "Good Day";
+console.log(message);
+
+/* 
+It would be exactly like: 
+
+(...) = function {
+    if (time <= 10){
+        message = ("Good Morning");
+    } else {
+        message = ("Good Day");
+    }
+    console.log(message);
+}
+
+This kind of feature would mean less lines
+*/
