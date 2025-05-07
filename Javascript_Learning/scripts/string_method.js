@@ -22,3 +22,26 @@ let blank = "/   ";
 blank = blank.trim();
 
 console.log(blank);
+
+// STRING SLICING: creation of a string from a pre-existing string
+
+// NON DYNAMIC METHOD:
+
+let prename = myname.slice(0, 5);
+let posname = myname.slice(5, 11);
+let firstChar = myname.slice(0, 1);
+let lastChar = myname.slice(-1);
+
+console.log(prename);
+console.log(posname);
+console.log(firstChar);
+console.log(lastChar);
+
+// DYNAMIC METHOD:
+
+let myName2 = "Joseph Joestar";
+let firstName2 = myName2.slice(0, myName2.indexOf(" "));
+let lastName2 = myName2.slice(myName2.indexOf(" "));
+
+console.log(firstName2);
+console.log(lastName2);
