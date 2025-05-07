@@ -50,23 +50,28 @@ const PROFESSOR = document.getElementById("professor_check_box");
 EDUCATIONAL_BUTTON.onclick = function(){
     if(HIGH_SCHOOL.checked){
         GET_p6.textContent = ("Okay! You finished High School.");
-        if(GRADUATED.checked){
-            GET_p6.textContent = ("Okay! You already graduated.");
-            if(PHD.checked){
-                GET_p6.textContent = ("Okay! You have a PhD.");
-            }
-        }
-    } else if(GRADUATED.checked){
+    } 
+    else if(GRADUATED.checked){
         GET_p6.textContent = ("Okay! You already graduated.");
-        if(PHD.checked){
-            GET_p6.textContent = ("Okay! You have a PhD.");
-        }
-    } else if(PHD.checked){
+    } 
+    else if(PHD.checked){
         GET_p6.textContent = ("Okay! You have a PhD.");
-    } else {
+    } 
+    else {
         GET_p6.textContent = ("Okay! I can see you don't have any educational formation. Don't worry It's all right!");
     }
+
+    if(STUDENT.checked){
+        GET_p7.textContent = ("Okay! You're a student.");
+    }
+    else if(PROFESSOR.checked){
+        GET_p7.textContent = ("Okay! You're a professor.");
+    }
+    else{
+        GET_p7.textContent = ("Okay! Tou're not a student or a professor.");
+    }
 }
+
 
 // Ternary Operator (basically the same thing as an if / else statetment, but It's more condensed and easier to read)
 
@@ -88,3 +93,46 @@ It would be exactly like:
 
 This kind of feature would mean less lines
 */
+
+
+/* 
+SWITCH/CASE: Not commonly used in any language due to It's specific use.
+Also not every language has It which makes It dificcult to use in bigger projects.
+It's largeness makes It unpopular and unusable, BUT It's a valid conditional structure.
+Could easily be substituted by IF/ELSE operations.s
+*/
+
+let switch_case_number;
+const GET_SWITCH_CASE_BOX = document.getElementById("switch_case_text_box");
+const GET_SWITCH_CASE_BUTTON = document.getElementById("switch_case_submit");
+const GET_p8 = document.getElementById("p8");
+
+GET_SWITCH_CASE_BUTTON.onclick = function(){
+    switch_case_number = GET_SWITCH_CASE_BOX.value;
+    switch_case_number = Number(switch_case_number);
+    switch(switch_case_number){
+        case 1:
+            GET_p8.textContent = ("Today is Sunday");
+            break;
+        case 2:
+            GET_p8.textContent = ("Today is Monday");
+            break;
+        case 3:
+            GET_p8.textContent = ("Today is Tuesday");
+            break;
+        case 4:
+            GET_p8.textContent = ("Today is Wedsneday");
+            break;
+        case 5:
+            GET_p8.textContent = ("Today is Thursday");
+            break;
+        case 6:
+            GET_p8.textContent = ("Today is Friday");
+            break;
+        case 7:
+            GET_p8.textContent = ("Today is Saturday");
+            break;
+        default:
+            GET_p8.textContent = ("Not a valid operation. Please try again.");
+    }
+}
