@@ -4,17 +4,19 @@ let email = "vitorinacioborges@gmailcom";
 
 // NO METHOD CHAINING
 
-let emailUsername = email.slice(0, email.indexOf("@"));
-let firstLetter = emailUsername.charAt(0);
+let firstLetter = email.charAt(0);
+let emailUsername = email.slice(1, email.indexOf("@"));
 firstLetter = firstLetter.toUpperCase();
 
 let emailAdress = email.slice(email.indexOf("@"));
 let substitute = emailAdress.replaceAll("@", "-");
 
-email = emailUsername + emailAdress;
+email = firstLetter + emailUsername + emailAdress;
 console.log(email);
 
 // METHOD CHAINING
 
-email = email.slice(0, email.indexOf("@")).charAt(0).toUpperCase() + email.slice(email.indexOf("@")).replaceAll("@", "-");
+email = email.charAt(0).toUpperCase() + email.slice(1, email.indexOf("@")) + email.slice(email.indexOf("@")).replaceAll("@", "-");
 console.log(email);
+
+// Expected result: "Vitorinacioborges-gmail.com"
