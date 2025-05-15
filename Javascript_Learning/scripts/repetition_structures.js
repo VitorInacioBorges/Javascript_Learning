@@ -17,7 +17,7 @@ While the condition is true the actions are executed in order from
 up to bottom. If suddenly the condition turn out to be false, the code,
 below the while structure, is going to be read.
 */
-/*
+
 // Example 1:
 
 let username = "";
@@ -60,7 +60,9 @@ First, the actions are executed at least once. After the first execution the
 program checks if the condition whithin the while is true, if It is, then 
 It repeats, if not, then actions below the while will be executed.
 */
-/*
+
+// Example 1:
+
 let username2 = "";
 
 do {
