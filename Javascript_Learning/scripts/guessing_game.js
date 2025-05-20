@@ -1,8 +1,8 @@
 const MIN = 1, MAX = 100;
-let guess, running = true;
+let guess;
 let answer = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
 
-for(let attempts = 0; running; attempts++){
+for(let attempts = 0; ; attempts++){
     guess = window.prompt(`Please guess a number between ${MIN} and ${MAX}:`);
     guess = Number(guess);
     if(isNaN(guess)){
@@ -16,7 +16,7 @@ for(let attempts = 0; running; attempts++){
             window.alert("LOWER!!!");
         } else {
             window.alert(`CORRECT! It took you ${attempts} attempts.`);
-            running = false;
+            break;
         }
     }
 }
