@@ -10,35 +10,30 @@
         <h1 id="h1"> --- </h1>
         <p id="p1"> --- </p>
         <p id="p2"> --- </p>
-
         <section id="usernameSection">
             <label for="username"> Username: </label> <br>
             <input id="textBox" type="text"> 
             <button id="submitButton"> Submit: </button>
             <p id="p3"> --- </p>
         </section>
-
         <section id="radiusSection">
             <label for="radius"> Enter the radius of a circle in centimeters (cm): </label> <br>
             <input id="textBox2" type="text"> 
             <button id="radiusButton"> Submit Radius: </button>
             <p id="p4"> --- </p>
+            <p id="counter_digit">0</p>
         </section>
-
-        <p id="counter_digit">0</p>
         <section id="counter_program_section">
             <button id="increase_button"> Increase </button>
             <button id="reset_button"> Reset </button>
             <button id="decrease_button"> Decrease </button>
         </section>
-        
         <section id="number_section">
             <label for="number"> Insert a number between 1 and 1000 </label> <br>
             <input id="text_box3" type="text">
             <button id="submit_number_button"> Submit Number </button>
             <p id="p5"> --- </p>
         </section>
-
         <section id="check_boxes_section">
             <label for="checkbox"> Insert your current educational state: </label> <br>
             <input id="high_school" type="radio"> High School <br>
@@ -50,14 +45,22 @@
             <p id="p6"> --- </p>
             <p id="p7"> --- </p>
         </section>
-
         <section id="switch_case_section">
             <label for="switch_case"> Enter a number from 1 to 7 </label> <br>
             <input id="switch_case_text_box" type="text">
             <button id="switch_case_submit"> Submit </button>
             <p id="p8"> --- </p>
         </section>
-
+        <form>
+            <h1> Temperature Conversion </h1>
+            <input type="number" id="text_box4" value="0"><br>
+            <input type="radio" id="c_f" name="group1">
+            <label for="c_f"> Celsius to Fahrenheit </label> <br>
+            <input type="radio" id="f_c" name="group1">
+            <label for="f_c"> Fahrenheit to Celsius </label> <br>
+            <button type="button" id="temperature_button" onclick="convert()"> Submmit </button>
+            <p id="conversion_result"> Click on the Button to Convert</p>
+        </form>
         <section id="scripts_section">
             <!-- <script src="scripts/start.js"></script> -->
             <!-- <script src="scripts/variables.js"></script> -->
@@ -75,7 +78,9 @@
             <!-- <script src="scripts/repetition_structures.js"></script> -->
             <!-- <script src="scripts/guessing_game.js"></script> -->
             <!-- <script src="scripts/functions.js"></script> -->
-            <script src="scripts/variable_scope.js"></script>
+            <!-- <script src="scripts/variable_scope.js"></script> -->
+            <script src="scripts/temperature.js"></script>
+            <script></script>
         </section>
     </body>
 </html>
